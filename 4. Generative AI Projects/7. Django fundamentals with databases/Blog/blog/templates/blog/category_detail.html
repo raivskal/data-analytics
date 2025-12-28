@@ -1,0 +1,7 @@
+<h1>{{ category.name }}</h1>
+
+{% for post in category.posts.all %}
+<p><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></p>
+{% empty %}
+<p>No posts in this category yet.</p>
+{% endfor %}

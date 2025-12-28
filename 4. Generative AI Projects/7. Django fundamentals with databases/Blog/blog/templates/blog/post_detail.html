@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %} {% block content %}
+<h1>{{ post.title }}</h1>
+
+<p class="text-muted">{{ post.created_at|date:"Y-m-d H:i" }}</p>
+
+<p>{{ post.content }}</p>
+
+<hr />
+
+<a href="{% url 'post-update' post.slug %}" class="btn btn-primary">Edit</a>
+<a href="{% url 'post-delete' post.slug %}" class="btn btn-danger">Delete</a>
+<a href="{% url 'post-create' %}" class="btn btn-success">New Post</a>
+<a href="{% url 'post-list' %}" class="btn btn-secondary">Back</a>
+
+{% endblock %}
