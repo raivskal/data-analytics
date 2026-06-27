@@ -1,0 +1,24 @@
+name: 'modern_dwh'
+version: '1.0.0'
+config-version: 2
+
+# This setting points to the profile in profiles.yml
+profile: 'modern_dwh'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  modern_dwh:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

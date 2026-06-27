@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: Customer dimension table containing enriched customer metrics and attributes.
+    columns:
+      - name: customer_id
+        description: Unique identifier for each customer.
+        tests:
+          - unique
+          - not_null
+      - name: total_spend
+        description: Total value of all completed orders placed by the customer.
+        tests:
+          - not_null
+
+  - name: fct_orders
+    description: Transactional fact table of order records.
+    columns:
+      - name: order_id
+        description: Unique identifier for each order.
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Reference to the customer who placed the order.
+        tests:
+          - not_null

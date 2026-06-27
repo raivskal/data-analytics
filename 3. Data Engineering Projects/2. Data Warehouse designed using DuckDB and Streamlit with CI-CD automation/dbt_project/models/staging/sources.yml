@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: raw_customers
+        description: Raw customer profile records.
+      - name: raw_orders
+        description: Raw transactional order records.
+      - name: raw_events
+        description: Raw website clickstream/interaction events.

@@ -1,0 +1,35 @@
+# Python virtual environment
+.venv/
+venv/
+ENV/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# DuckDB database files (Local Data)
+data/*.db
+data/*.duckdb
+data/*.wal
+
+# dbt artifacts and logs
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/dbt_modules/
+dbt_project/logs/
+
+# Streamlit configurations
+.streamlit/
+
+# IDE and Editor configs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
